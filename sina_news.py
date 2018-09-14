@@ -128,29 +128,6 @@ def sroll_multi(driver):
             break
         lastHeight = newHeight
         loopCounter = loopCounter + 1
-# =============================================================================
-#         index=random.randint(10,newHeight)
-#         path_reg='//*[@id="liveList01"]/div[%s]/div[2]/div/p' %index
-#         elem=driver.find_element_by_xpath(path_reg)
-#         elem.click()
-# =============================================================================
-        
-         
-#Note: titles is titles_WebElement type object
-def write_menu(filename,titles):
-    with open(filename, 'w') as fp:
-        pass
-    for title in titles:
-        if r'目录' not in title.text:
-            print( "[" + title.text + "](" + title.get_attribute("href") + ")")
-            t = title.text.encode('utf-8')
-            t = title.text.replace(":", " : ")
-            t = title.text.replace("|", " 丨 ")
-            t = title.text 
-            write_text(filename, "[" + t + "](" + title.get_attribute("href") + ")")
-            #assert type(title) == "WebElement")
-            #print type(title)
- 
  
             
 options = webdriver.ChromeOptions()  
